@@ -1,0 +1,1 @@
+document.addEventListener('click',event=>{const button=event.target.closest('.suggestions button');if(!button)return;event.preventDefault();event.stopPropagation();const input=document.getElementById('input');if(!input)return;input.value=button.textContent.trim();input.style.height='auto';input.dispatchEvent(new Event('input',{bubbles:true}));input.focus()},true);
